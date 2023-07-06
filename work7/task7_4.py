@@ -1,11 +1,14 @@
-def max_min(data):
-  a = data[0]
-  b = data[0]
-  for num in data:
-    if num > a:
-      a = num
-    elif num < b:
-        b = num
-  return a, b
+def max(value_iterable):
+    max_value = value_iterable[0]
+    for value in value_iterable:
+        if value > max_value:
+            max_value = value
+    return max_value
 
-print(max_min([1, 120, 1032, 14, 0, 4, 77, 100]))
+
+def min(value_iterable):
+    min_value = value_iterable[0]
+    for value in value_iterable:
+        if value < min_value:
+            min_value = value
+    return min_value
