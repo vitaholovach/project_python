@@ -1,6 +1,8 @@
-def square(num):
-    return num ** 2
+from typing import Callable, Any, Iterable
 
-numbers = [1, 2, 3, 4, 5]
-squares = list(map(square, numbers))
-print(squares)
+
+def map_option(function: Callable[[Any], Any], iterable: Iterable) -> Iterable:
+    mapped_items = []
+    for item in iterable:
+        mapped_items.append(function(item))
+    return mapped_items
