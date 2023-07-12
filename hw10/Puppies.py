@@ -1,4 +1,4 @@
-from Labrador import Labrador
+from Labrador1 import Labrador
 
 
 class Puppies(Labrador):
