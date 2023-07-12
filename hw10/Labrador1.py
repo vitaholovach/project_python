@@ -1,4 +1,4 @@
-from Dog import Dog
+from Dog1 import Dog
 
 
 class Labrador(Dog):
