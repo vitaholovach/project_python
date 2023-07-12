@@ -1,9 +1,9 @@
-from Shark import Shark
+from Animals import Animals
 
 
-class Fish(Shark):
-    def __init__(self, name: str, age: int, view: str, fish_for_food: str):
-        super().__init__(name, age, view)
+class Fish(Animals):
+    def __init__(self, name: str, age: int, fish_for_food: str):
+        super().__init__(name, age)
         self._fish_for_food = fish_for_food
 
     @property
@@ -25,6 +25,6 @@ class Fish(Shark):
 
 
 if __name__ == '__main__':
-    fish = Fish("Asad", 1, "River fish", "Pike")
+    fish = Fish("Asad", 1, "Pike")
     fish.cooking_method()
     fish.fish_for_food = "Salmon"

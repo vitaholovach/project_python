@@ -2,9 +2,9 @@ from Labrador import Labrador
 
 
 class Puppies(Labrador):
-    def __init__(self, name: str, age: int, residence: str, ears: str, grooming: str,
+    def __init__(self, name: str, age: int, ears: str, grooming: str,
                  document: str):
-        super().__init__(name, age, residence, ears, grooming)
+        super().__init__(name, age, ears, grooming)
         self._document = document
 
     @property
@@ -26,6 +26,6 @@ class Puppies(Labrador):
 
 
 if __name__ == '__main__':
-    puppies = Puppies("Molli", 2, "Home", "Short", "Haircut", "Certificate")
+    puppies = Puppies("Molli", 2, "Short", "Haircut", "Certificate")
     puppies.document = "Passport"
     puppies.cynologist()

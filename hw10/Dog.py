@@ -1,9 +1,9 @@
-from Cat import Cat
+from Animals import Animals
 
 
-class Dog(Cat):
-    def __init__(self, name: str, age: int, residence: str, ears: str):
-        super().__init__(name, age, residence)
+class Dog(Animals):
+    def __init__(self, name: str, age: int, ears: str):
+        super().__init__(name, age)
         self._ears = ears
 
     @property
@@ -18,13 +18,13 @@ class Dog(Cat):
             print(f'Expected response should be that the ears are long, got {new_ears} instead')
 
     def has(self):
-        print(f"{self.name} it has {self._ears}.")
+        print(f"{self.name} it has ears {self._ears}.")
 
     def does(self):
         print(f"{self.name} stayting in an aviary.")
 
 
 if __name__ == '__main__':
-    dog = Dog("Ron", 5, "street", "Long")
+    dog = Dog("Ron", 5, "Long")
     dog.has()
     dog.ears = "Short"

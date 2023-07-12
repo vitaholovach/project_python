@@ -1,9 +1,9 @@
-from Animals import Animals
+from Dog import Dog
 
 
-class Cat(Animals):
-    def __init__(self, name: str, age: int, residence: str):
-        super().__init__(name, age)
+class ShepherdDog(Dog):
+    def __init__(self, name: str, age: int, ears: str, grooming: str, residence: str):
+        super().__init__(name, age, ears, grooming)
         self._residence = residence
 
     @property
@@ -18,13 +18,13 @@ class Cat(Animals):
             print('Fill in the field in string format')
 
     def eat_food(self):
-        print(f'{self.name} eat mice')
+        print(f'{self.name} eat bones')
 
     def does(self):
-        print(f'{self.name} sleapin')
+        print(f'{self.name} protects the house')
 
 
 if __name__ == '__main__':
-    cat = Cat("Mira", 1, "Home")
-    cat.eat_food()
-    cat.does()
+    shepherdDog = ShepherdDog("Mira", 1, "Sticking", "Hygienic", "Home")
+    shepherdDog.eat_food()
+    shepherdDog.does()

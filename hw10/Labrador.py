@@ -2,8 +2,8 @@ from Dog import Dog
 
 
 class Labrador(Dog):
-    def __init__(self, name: str, age: int, residence: str, ears: str, grooming: str):
-        super().__init__(name, age, residence, ears)
+    def __init__(self, name: str, age: int, ears: str, grooming: str):
+        super().__init__(name, age, ears)
         self._grooming = grooming
 
     @property
@@ -25,6 +25,6 @@ class Labrador(Dog):
 
 
 if __name__ == '__main__':
-    labrador = Labrador("Rich", 4, "Home or street", "Hanging", "Сreative")
+    labrador = Labrador("Rich", 4, "Hanging", "Сreative", )
     labrador.procedure()
     labrador.grooming = "Hygienic"
