@@ -10,16 +10,16 @@ class Tablet(ILaptop, IElectronics):
         self.__installing_an_update = True
         self.__battery_power = 1
 
-# abstraction, polymorphism
+    # abstraction, polymorphism
     def _include(self):
         self.__status = True
         print("Tablet ready to go")
 
-# abstraction, polymorphism
+    # abstraction, polymorphism
     def _software_update(self):
         print("New software version available")
 
-# incapsulation, abstraction, polymorphism
+    # incapsulation, abstraction, polymorphism
     def _charge(self, battery: int):
         if battery > 35:
             print("Charging is enough. Keep using your tablet")
@@ -27,12 +27,12 @@ class Tablet(ILaptop, IElectronics):
             print("Tablet power saving mode")
         self.__battery_power = battery
 
-# abstraction, polymorphism
+    # abstraction, polymorphism
     def _turn_off(self):
         self.__status = True
         print("Job completed!")
 
-# incapsulation
+    # incapsulation
     def launch(self, battery_power: int):
         self._include()
         self._software_update()
